@@ -1,0 +1,130 @@
+#modifiers {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    max-width: 1200px;
+    margin: 0 auto 1em auto;
+}
+
+#song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto 10em auto;
+}
+
+.song-card {
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    padding: 16px 16px 4px 16px;
+    box-sizing: border-box;
+
+}
+
+.song-card h3 {
+    margin: 12px 0 4px 0;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.song-card p {
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.song-card:hover {
+    z-index: 10;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+}
+
+.song-card:hover .play-button {
+    display: block;
+}
+
+.album-art {
+    background-color: #e0e0e0; /* Temp image block */
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    position: relative;
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hidden-details {
+    position: absolute;
+    top: 100%;
+
+    left: -1px;
+    right: -1px;
+
+    background-color: white;
+    border: 1px solid black;
+    border-top: none;
+
+    padding: 2px 16px 16px 16px;
+    display: none;
+}
+
+.song-card:hover .hidden-details {
+    display: block;
+}
+
+#bottom-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightgray;
+    border-top: 2px solid black;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 10px;
+    z-index: 100;
+}
+
+#bottom-player.show-player {
+    display: flex;
+}
+
+.song-detail h4 {
+    display: inline-block;
+}
+
+
+@media (max-width: 500px) {
+
+    #song-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+    }
+
+    #modifiers {
+        flex-wrap: wrap;
+    }
+
+    #search-box {
+        width: 100%;
+    }
+
+    #bottom-player {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
