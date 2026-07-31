@@ -10,71 +10,158 @@
     <title>insert title</title>
 
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/catalogue.css">
 
     <!-- ADD PAGE SPECIFIC CSS BELOW HERE -->
+
 </head>
 
 <body>
 
-    <!-- ==========================
-         GLOBAL HEADER & NAVIGATION 
-         ==========================-->
-    <header>
-        <div class="logo">
-            <a href="index.html">insert logo (click to go home)</a>
+<!-- ==========================
+     GLOBAL HEADER & NAVIGATION
+     ==========================-->
+<header>
+    <div class="logo">
+        <a href="index.html">insert logo (click to go home)</a>
+    </div>
+
+    <!-- hamburger button for mobile -->
+    <button id="mobile-menu-button" aria-label="opens nav menu">☰</button>
+
+    <!-- navigation links -->
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="team.html">Team</a>
+
+        <!-- dark mode toggle and profile button -->
+        <div class="nav-actions">
+            <button id="toggle-theme-button" aria-label="toggle dark or light mode">MOON/SUN</button>
+            <a href="register.html" id="nav-login-button">LOGIN/REGISTER</a>
+            <!-- changes to profile button once logged in-->
         </div>
+    </nav>
+</header>
 
-        <!-- hamburger button for mobile -->
-        <button id="mobile-menu-button" aria-label="opens nav menu">☰</button>
+<!-- =================
+     MAIN CONTENT AREA
+     =================-->
+<main id="main-content">
 
-        <!-- navigation links -->
-        <nav id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="catalogue.html">Catalogue</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="team.html">Team</a>
+    <!-- START HERE -->
 
-            <!-- dark mode toggle and profile button -->
-            <div class="nav-actions">
-                <button id="toggle-theme-button" aria-label="toggle dark or light mode">MOON/SUN</button>
-                <a href="register.html" id="nav-login-button">LOGIN/REGISTER</a>
-                <!-- changes to profile button once logged in-->
-            </div>
-        </nav>
-    </header>
+    <section id="modifiers">
+        <label>
+            <input type="text" placeholder="Search..." id="search-box">
+        </label>
 
-    <!-- =================
-         MAIN CONTENT AREA
-         =================-->
-    <main id="main-content">
+        <label for="genre-select"></label>
+        <select name="genre" id="genre-select">
+            <option value="all">All Genres</option>
+            <option value="Artcore">Artcore</option>
+            <option value="EDM">EDM</option>
+            <option value="Electropop">Electropop</option>
+            <option value="Hardcore">Hardcore</option>
+            <option value="Hardstyle">Hardstyle</option>
+            <option value="House">House</option>
+            <option value="Indie Pop">Indie Pop</option>
+            <option value="Trance">Trance</option>
+        </select>
 
-        <!-- START HERE -->
-        <h1>Placeholder for Page Content</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sem sed sem sagittis facilisis.
-            Maecenas facilisis ipsum sed purus suscipit, eu lobortis diam interdum. Etiam at rhoncus risus. Aliquam
-            dapibus sem sed sapien maximus ultricies. Mauris ac justo sit amet leo malesuada placerat in et neque. Proin
-            metus urna, vehicula sed nisl vitae, pharetra fermentum tortor. Aliquam fringilla faucibus magna, et
-            elementum sapien fermentum nec. Praesent eu ultrices turpis. Integer eu sapien congue, sollicitudin felis a,
-            aliquet lacus. Etiam tempor, massa ac pulvinar viverra, massa magna consequat urna, non malesuada tortor
-            nibh egestas ex. Donec sem leo, aliquet ut. </p>
+        <label for="sort-by">
+            <select name="sort-by" id="sort-by">
+                <option value="title">Title (A-Z)</option>
+                <option value="artist">Artist (A-Z)</option>
+                <option value="genre">Genre (A-Z)</option>
+                <option value="duration">Duration (Shortest)</option>
+                <option value="year">Release Year (Oldest)</option>
+                <option value="language">Language (A-Z)</option>
+            </select>
+        </label>
 
-    </main>
+    </section>
 
-    <!-- ==========================
-         FOOTER SAME FOR EVERY PAGE
-         ========================== -->
-    <footer>
-        <p>&copy; 2026 music app. we own all rights.</p>
-    </footer>
+    <section id="song-list">
 
-    <!-- ==================
-         JAVASCRIPT SCRIPTS
-         ===================-->
 
-    <!-- EVERY PAGE NEEDS THEME SCRIPT -->
-    <script src="js/theme.js"></script>
+        <!--        &lt;!&ndash; DUMMY CARD STARTTTTTTTTTTTTTTTTTTTTTTTTTTTTT &ndash;&gt;-->
+        <!--        <article class="song-card">-->
+        <!--            &lt;!&ndash; <img src="images/cover.png" alt="Album Art"> &ndash;&gt;-->
 
-    <!-- ADD PAGE-SPECIFIC JS BELOW HERE. DONT PUT THEM IN THE HEAD SECTION OR IT WONT WORK -->
+        <!--            <div class="album-art">-->
+        <!--                <button class="play-button">Play</button>-->
+        <!--            </div>-->
+
+        <!--            <h3>Sandstorm</h3>-->
+        <!--            <p>Darude</p>-->
+        <!--            <div>-->
+
+        <!--            </div>-->
+        <!--            <div class="hidden-details">-->
+        <!--                <p>Language: Instrumental</p>-->
+        <!--                <p>Year: 2001</p>-->
+        <!--                <p>Duration: 3:45</p>-->
+        <!--                <p>Genre: Eurodance</p>-->
+
+        <!--            </div>-->
+        <!--        </article>-->
+        <!--        &lt;!&ndash; DUMMY CARD ENDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD &ndash;&gt;-->
+
+        <!--        &lt;!&ndash; DUMMY CARD STARTTTTTTTTTTTTTTTTTTTTTTTTTTTTT &ndash;&gt;-->
+        <!--        <article class="song-card">-->
+
+        <!--            <div class="album-art">-->
+        <!--                <img src="images/freaky.png" alt="Album Art">-->
+        <!--                <button class="play-button">Play</button>-->
+        <!--            </div>-->
+
+        <!--            <h3>Freaky Freak</h3>-->
+        <!--            <p>Kamome Sano</p>-->
+        <!--            <div>-->
+
+        <!--            </div>-->
+        <!--            <div class="hidden-details">-->
+        <!--                <p>Language: Instrumental</p>-->
+        <!--                <p>Year: 2016</p>-->
+        <!--                <p>Duration: 1:55</p>-->
+        <!--                <p>Genre: EDM</p>-->
+
+        <!--            </div>-->
+        <!--        </article>-->
+        <!--        &lt;!&ndash; DUMMY CARD ENDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD &ndash;&gt;-->
+
+
+    </section>
+
+    <!-- THE SPOTIFY STYLE BOTTOM PLAYER -->
+    <div id="bottom-player">
+        <h4 id="song-name">this doesnt work</h4>
+        <audio id="main-audio" controls src="audio/freaky-freak.mp3"></audio>
+        <button id="close-player-button">Close</button>
+    </div>
+
+
+</main>
+
+<!-- ==========================
+     FOOTER SAME FOR EVERY PAGE
+     ========================== -->
+<footer>
+    <p>&copy; 2026 music app. we own all rights.</p>
+</footer>
+
+<!-- ==================
+     JAVASCRIPT SCRIPTS
+     ===================-->
+
+<!-- EVERY PAGE NEEDS THEME SCRIPT -->
+<!--<script src="js/theme.js"></script>-->
+<script src="js/catalogue.js"></script>
+
+
+<!-- ADD PAGE-SPECIFIC JS BELOW HERE. DONT PUT THEM IN THE HEAD SECTION OR IT WONT WORK -->
 
 </body>
 </html>
