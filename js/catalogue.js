@@ -135,7 +135,7 @@ const songs = [
         year: 2014,
         language: "English",
         img: "images/gimme-a-big-beat.webp",
-        audio: "audio/gimme-a-big-beat.mp3"
+        audio: "audio/gimme-a-big-beat.opus"
     },
     {
         id: 2,
@@ -146,7 +146,7 @@ const songs = [
         year: 2008,
         language: "Japanese",
         img: "images/more-more-more.webp",
-        audio: "audio/more-more-more.mp3"
+        audio: "audio/more-more-more.opus"
     },
     {
         id: 3,
@@ -157,7 +157,7 @@ const songs = [
         year: 2009,
         language: "Japanese",
         img: "images/only-my-railgun.webp",
-        audio: "audio/only-my-railgun.mp3"
+        audio: "audio/only-my-railgun.opus"
     },
     {
         id: 4,
@@ -168,7 +168,7 @@ const songs = [
         year: 2004,
         language: "Instrumental",
         img: "images/votum-stellarum.webp",
-        audio: "audio/votum-stellarum.mp3"
+        audio: "audio/votum-stellarum.opus"
     },
     {
         id: 5,
@@ -179,7 +179,7 @@ const songs = [
         year: 2013,
         language: "English",
         img: "images/electric-dance-system-music.webp",
-        audio: "audio/electric-dance-system-music.mp3"
+        audio: "audio/electric-dance-system-music.opus"
     },
     {
         id: 6,
@@ -190,7 +190,7 @@ const songs = [
         year: 2014,
         language: "Instrumental",
         img: "images/astrogazer.webp",
-        audio: "audio/astrogazer.mp3"
+        audio: "audio/astrogazer.opus"
     },
     {
         id: 7,
@@ -201,7 +201,7 @@ const songs = [
         year: 2017,
         language: "Instrumental",
         img: "images/squall.webp",
-        audio: "audio/squall.mp3"
+        audio: "audio/squall.opus"
     },
     {
         id: 8,
@@ -212,7 +212,7 @@ const songs = [
         year: 2017,
         language: "English",
         img: "images/alive-in-my-soul.webp",
-        audio: "audio/alive-in-my-soul.mp3"
+        audio: "audio/alive-in-my-soul.opus"
     },
     {
         id: 9,
@@ -223,7 +223,7 @@ const songs = [
         year: 2004,
         language: "Japanese",
         img: "images/daisuke.webp",
-        audio: "audio/daisuke.mp3"
+        audio: "audio/daisuke.opus"
     },
     {
         id: 10,
@@ -234,7 +234,7 @@ const songs = [
         year: 2017,
         language: "Instrumental",
         img: "images/butterfly-twist.webp",
-        audio: "audio/butterfly-twist.mp3"
+        audio: "audio/butterfly-twist.opus"
     },
     {
         id: 11,
@@ -245,7 +245,7 @@ const songs = [
         year: 2020,
         language: "Instrumental",
         img: "images/high-voltage.webp",
-        audio: "audio/high-voltage.mp3"
+        audio: "audio/high-voltage.opus"
     },
     {
         id: 12,
@@ -256,7 +256,7 @@ const songs = [
         year: 2011,
         language: "Instrumental",
         img: "images/miracle-meets.webp",
-        audio: "audio/miracle-meets.mp3"
+        audio: "audio/miracle-meets.opus"
     },
     {
         id: 13,
@@ -267,7 +267,7 @@ const songs = [
         year: 2016,
         language: "Instrumental",
         img: "images/velvet.webp",
-        audio: "audio/velvet.mp3"
+        audio: "audio/velvet.opus"
     },
     {
         id: 14,
@@ -278,7 +278,7 @@ const songs = [
         year: 2015,
         language: "Instrumental",
         img: "images/technopolis-2085.webp",
-        audio: "audio/technopolis-2085.mp3"
+        audio: "audio/technopolis-2085.opus"
     },
     {
         id: 15,
@@ -289,7 +289,7 @@ const songs = [
         year: 2010,
         language: "Instrumental",
         img: "images/schwarzschild.webp",
-        audio: "audio/schwarzschild.mp3"
+        audio: "audio/schwarzschild.opus"
     },
     {
         id: 16,
@@ -300,7 +300,7 @@ const songs = [
         year: 2018,
         language: "English",
         img: "images/put-your-hands-up.webp",
-        audio: "audio/put-your-hands-up.mp3"
+        audio: "audio/put-your-hands-up.opus"
     },
     {
         id: 17,
@@ -311,7 +311,7 @@ const songs = [
         year: 2018,
         language: "Instrumental",
         img: "images/corruption.webp",
-        audio: "audio/corruption.mp3"
+        audio: "audio/corruption.opus"
     },
     {
         id: 18,
@@ -322,7 +322,7 @@ const songs = [
         year: 2019,
         language: "Instrumental",
         img: "images/caramel-mocha.webp",
-        audio: "audio/caramel-mocha.mp3"
+        audio: "audio/caramel-mocha.opus"
     },
     {
         id: 19,
@@ -333,7 +333,7 @@ const songs = [
         year: 2011,
         language: "Instrumental",
         img: "images/flower.webp",
-        audio: "audio/flower.mp3"
+        audio: "audio/flower.opus"
     },
     {
         id: 20,
@@ -344,7 +344,7 @@ const songs = [
         year: 2016,
         language: "Instrumental",
         img: "images/freaky-freak.webp",
-        audio: "audio/freaky-freak.mp3"
+        audio: "audio/freaky-freak.opus"
     },
     {
         id: 21,
@@ -355,7 +355,7 @@ const songs = [
         year: 2013,
         language: "Instrumental",
         img: "images/valanga.webp",
-        audio: "audio/valanga.mp3"
+        audio: "audio/valanga.opus"
     },
     {
         id: 22,
@@ -366,7 +366,7 @@ const songs = [
         year: 2021,
         language: "Japanese",
         img: "images/loneliness-of-spring.webp",
-        audio: "audio/loneliness-of-spring.mp3"
+        audio: "audio/loneliness-of-spring.opus"
     },
     {
         id: 23,
@@ -377,7 +377,7 @@ const songs = [
         year: 2018,
         language: "Japanese",
         img: "images/shoujo-rei.webp",
-        audio: "audio/shoujo-rei.mp3"
+        audio: "audio/shoujo-rei.opus"
     },
     {
         id: 24,
@@ -388,7 +388,7 @@ const songs = [
         year: 2012,
         language: "Japanese",
         img: "images/goodbye-chainsaw.webp",
-        audio: "audio/goodbye-chainsaw.mp3"
+        audio: "audio/goodbye-chainsaw.opus"
     },
     {
         id: 25,
@@ -399,7 +399,7 @@ const songs = [
         year: 2026,
         language: "Korean",
         img: "images/mosi-mosi.webp",
-        audio: "audio/mosi-mosi.mp3"
+        audio: "audio/mosi-mosi.opus"
     },
     {
         id: 26,
@@ -410,7 +410,7 @@ const songs = [
         year: 2016,
         language: "Japanese",
         img: "images/yoiyoi-kokon.webp",
-        audio: "audio/yoiyoi-kokon.mp3"
+        audio: "audio/yoiyoi-kokon.opus"
     },
     {
         id: 27,
@@ -421,7 +421,7 @@ const songs = [
         year: 2025,
         language: "English",
         img: "images/proi-proi.webp",
-        audio: "audio/proi-proi.mp3"
+        audio: "audio/proi-proi.opus"
     },
     {
         id: 28,
@@ -432,7 +432,7 @@ const songs = [
         year: 2016,
         language: "Chinese",
         img: "images/nenten.webp",
-        audio: "audio/nenten.mp3"
+        audio: "audio/nenten.opus"
     },
     {
         id: 29,
@@ -443,7 +443,7 @@ const songs = [
         year: 2021,
         language: "Chinese",
         img: "images/super-idol.webp",
-        audio: "audio/super-idol.mp3"
+        audio: "audio/super-idol.opus"
     },
     {
         id: 30,
@@ -454,7 +454,7 @@ const songs = [
         year: 2021,
         language: "Chinese",
         img: "images/shadow.webp",
-        audio: "audio/shadow.mp3"
+        audio: "audio/shadow.opus"
     },
     {
         id: 31,
@@ -465,7 +465,7 @@ const songs = [
         year: 2019,
         language: "Korean",
         img: "images/kill-this-love.webp",
-        audio: "audio/kill-this-love.mp3"
+        audio: "audio/kill-this-love.opus"
     }
 ];
 
