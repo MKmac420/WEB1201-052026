@@ -1,0 +1,354 @@
+:root {
+    --bg-track: #e0e0e0;
+    --bar-red: #ff5252;
+    --bar-green: #26de81;
+    --bar-blue: #45aaf2;
+    --grid-gap: 24px;
+    --max-width: 1200px;
+}
+
+/*skill bars*/
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.bar-bg {
+    background-color: var(--bg-track);
+    width: 100%;
+    height: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    border-radius: 6px;
+    transform-origin: left;
+    animation:
+            repeatLoad 8s infinite ease-in-out,
+            cycleColors 8s infinite ease-in-out;
+}
+
+@keyframes loadBars {
+    from { width: 0; }
+}
+
+@keyframes repeatLoad {
+    0%, 100% { transform: scaleX(0); }
+    15%, 85% { transform: scaleX(1); }
+}
+
+@keyframes cycleColors {
+    0%, 100% { background-color: var(--bar-red); }
+    33% { background-color: var(--bar-green); }
+    66% { background-color: var(--bar-blue); }
+}
+
+.python     { width: 80%; }
+.java       { width: 75%; }
+.html       { width: 90%; }
+.css        { width: 60%; }
+.javascript { width: 50%; }
+.sql        { width: 75%; }
+.bash       { width: 60%; }
+.markdown   { width: 95%; }
+
+
+/*site layout*/
+
+.topmost-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: var(--grid-gap);
+    align-items: start;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.top-left-content {
+    grid-column: 1;
+}
+
+#aside-box {
+    grid-column: 2;
+    width: 100%;
+    position: static;
+}
+
+#aside-box figure {
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+#aside-box img {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.full-width-section {
+    grid-column: 1 / -1;
+}
+
+
+/*other style stuff*/
+#aside-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#aside-box th {
+    text-align: left;
+    vertical-align: top;
+    padding: 8px 12px;
+    font-weight: 600;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    width: 40%;
+}
+
+#aside-box td {
+    padding: 8px 12px;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#aside-box tr:last-child th,
+#aside-box tr:last-child td {
+    border-bottom: none;
+}
+
+#aside-box tr:hover {
+    background-color: #fafafa;
+}
+
+#aside-name {
+    text-align: center;
+    margin-top: 0;       /* Optional: aligns top spacing evenly */
+    margin-bottom: 12px;  /* Optional: adds breathing room above the photo */
+}
+
+.cv-download {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 12px;     /* Space below the image */
+    margin-bottom: 16px;  /* Space above the table */
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+
+    /* Smooth hover effect */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cv-download:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+
+
+
+.toc-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px 20px;
+    margin: 16px 0 24px 0;
+    max-width: 320px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.toc-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    color: #222;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 6px;
+}
+
+.toc-box ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.toc-box li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.toc-box li:last-child {
+    margin-bottom: 0;
+}
+
+.toc-box a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.toc-box a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .topmost-container {
+        grid-template-columns: 1fr; /* Stack into a single column */
+    }
+
+    /* Force Aside Box to appear FIRST at the top on mobile */
+    #aside-box {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    /* Move Intro/Bio content SECOND under the aside box */
+    .top-left-content {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* Optional: Slightly smaller photo on mobile screens */
+    #aside-box img {
+        max-width: 150px;
+    }
+}
+
+@media print {
+
+    /* 1. Hide non-resume UI elements */
+    header,
+    footer,
+    .nav-actions,
+    .toc-box,
+    .cv-download,
+    .cv-btn,
+    #mobile-menu-button {
+        display: none !important;
+    }
+
+    /* 2. Force clean white paper background */
+    body {
+        background-color: white !important;
+        color: black !important;
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+    }
+
+    main, .portfolio-container, .wiki-full-width {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /*
+      3. Use Flexbox for print to force side-by-side layout on Page 1
+      (Fixes Firefox Grid page-break bug)
+    */
+    .topmost-container {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important; /* Allows full-width sections to wrap below */
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    /* Left column takes remaining horizontal space */
+    .top-left-content {
+        flex: 1 1 0% !important;
+        min-width: 0 !important;
+    }
+
+    /* Right column stays fixed at 260px on Page 1 */
+    #aside-box {
+        width: 260px !important;
+        flex-shrink: 0 !important;
+        position: static !important;
+        margin: 0 !important;
+    }
+
+    /* Lower sections wrap underneath across 100% width */
+    .full-width-section {
+        width: 100% !important;
+        flex: 1 0 100% !important;
+    }
+
+    /*
+      4. Prevent text overlap & bad page breaks (Fixes Page 4 collision)
+    */
+    section,
+    article,
+    table,
+    ul,
+    ol,
+    h1,
+    h2,
+    h3 {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* 5. Clean skill bars on paper */
+    .bar-bg {
+        border: 1px solid #000;
+        background-color: #fff !important;
+    }
+
+    .bar-fill {
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        animation: none !important;
+        transform: scaleX(1) !important;
+    }
+
+    /* 1. Make the profile image smaller on paper */
+    #aside-box img {
+        max-width: 110px !important;
+        margin: 0 auto 6px auto !important;
+    }
+
+    #side-name {
+        font-size: 14pt !important;
+        margin-bottom: 4px !important;
+    }
+
+    /* 2. Compact the sidebar table so it fits on Page 1 */
+    #aside-box table {
+        font-size: 8pt !important;        /* Smaller print text */
+        margin-top: 6px !important;
+        border-collapse: collapse !important;
+    }
+
+    #aside-box th,
+    #aside-box td {
+        padding: 3px 5px !important;      /* Reduced padding between rows */
+        line-height: 1.2 !important;
+    }
+}
