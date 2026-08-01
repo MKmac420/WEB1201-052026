@@ -6,75 +6,302 @@
     <!-- DONT TOUCH OR MOBILE UI DIES -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- CHANGE THIS TITLE FOR EACH PAGE-->
-    <title>insert title</title>
+    <title>Portfolio - Vimesh</title>
 
     <link rel="stylesheet" href="css/global.css">
-
-    <!-- ADD PAGE SPECIFIC CSS BELOW HERE -->
+    <link rel="stylesheet" href="css/portfolio-vimesh.css">
 </head>
 
 <body>
 
-    <!-- ==========================
-         GLOBAL HEADER & NAVIGATION 
-         ==========================-->
-    <header>
-        <div class="logo">
-            <a href="index.html">insert logo (click to go home)</a>
+<!-- ==========================
+     GLOBAL HEADER & NAVIGATION
+     ==========================-->
+<header>
+    <div class="logo">
+        <a href="index.html">insert logo (click to go home)</a>
+    </div>
+
+    <!-- hamburger button for mobile -->
+    <button id="mobile-menu-button" aria-label="opens nav menu">☰</button>
+
+    <!-- navigation links -->
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="team.html">Team</a>
+
+        <!-- dark mode toggle and profile button -->
+        <div class="nav-actions">
+            <button id="toggle-theme-button" aria-label="toggle dark or light mode">MOON/SUN</button>
+            <a href="register.html" id="nav-login-button">LOGIN/REGISTER</a>
+        </div>
+    </nav>
+</header>
+
+<!-- =================
+     MAIN CONTENT AREA
+     =================-->
+<main id="main-content">
+
+    <div class="topmost-container">
+
+        <div class="top-left-content">
+            <section class="intro-block">
+                <h1>This is Vimesh</h1>
+                <p>Hello, my name is Vimesh, a Computer Science student studying at Sunway University. I am part of the team leading the song catalogue section of the website as well as the website skeleton to kickstart the project.</p>
+            </section>
+
+            <nav class="toc-box">
+                <h3>Contents</h3>
+                <ol>
+                    <li><a href="#biography">Biography</a></li>
+                    <li><a href="#education">Education Background</a></li>
+                    <li><a href="#skills">Technical Skills</a></li>
+                    <li><a href="#projects">Featured Projects</a></li>
+                    <li><a href="#future">Future Plans</a></li>
+                </ol>
+            </nav>
+
+            <section id="biography">
+                <h2>Biography</h2>
+                <p>
+                    My name is Vimesh A/L Puwaneswaran, I and currently in my 3rd semester in the degree program Bachelor of Science (Honours) in Computer Science at Sunway University. I joined the September 2025 intake right after my Foundation In Arts program ended.
+                </p>
+                <p>
+                    My main interests in my academic journey is everything to do with Big Data. I am deeply interested in Data Science related fields, be it data analytics, machine learning, and AI. For that, I am undergoing my degree to gain the fundamentals of computer science to help me reach my goals. I also believe in using Generative AI responsibly, AI can do amazing things, it can teach us new skills, help us brainstorm, and assist us in professional tasks. However, I also believe that GenAI should be used appropriately, I don't believe in using GenAI to generate art, music, or literature, and for it to be published, I don't believe in vibecoding, and I don't believe in overreliance on GenAI. For that, it is my personal motto to use AI responsibly and appropriately.
+                </p>
+                <p>
+                    Beyond technology, I am also interested in literature, especially those with themes of dystopia and psychological horror. I also occasionally draw in my free time. I am also interested in psychology, specifically the branches of psychoanalysis and sociology, and I am willing to take some supporting courses in the near future, such as with Sunway University's free electives to further expand my knowledge. Knowing this knowledge will help me understand how humans interact with technology better as well.
+                </p>
+            </section>
+
+            <section id="education">
+                <h2>Education Background</h2>
+                <p>
+                    I am also currently undergoing the Bachelor of Science (Honours) in Computer Science course at Sunway University. I have been in this course since September 2025 and am in my 3rd semester. I am expected to graduate in September 2028. My current CGPA is 3.73/4.00
+                </p>
+                <p>
+                    I currently possess the following educational credentials.
+                </p>
+                <ul>
+                    <li>Ujian Penilaian Sekolah Rendah (UPSR) From Kementerian Pendidikan Malaysia, 2016</li>
+                    <li>Sijil Pelajaran Malaysia (SPM) from KPM From Kementerian Pendidikan Malaysia, 2024</li>
+                    <li>Foundation In Arts (FIA) From Sunway College KL, 2025</li>
+                </ul>
+                <p>
+                    In addition to the above, I also possess several professional certificates such as the following.
+                </p>
+                <ul>
+                    <li>London Chamber of Commerce and Industry (LCCI) Level 2 Certificate in Bookkeeping and Accounting</li>
+                    <li>Cisco Certified Network Associate (CCNA) Introduction to Networks</li>
+                </ul>
+            </section>
         </div>
 
-        <!-- hamburger button for mobile -->
-        <button id="mobile-menu-button" aria-label="opens nav menu">☰</button>
+        <aside id="aside-box">
+            <h2 id="aside-name">Vimesh</h2>
+            <figure>
+                <img src="images/shoujo-rei.webp" alt="Image of Vimesh">
+            </figure>
+            <button class="cv-download" onclick="window.print()">Download CV (PDF)</button>
+            <table>
+                <tr>
+                    <th>Full Name</th>
+                    <td>Vimesh A/L Puwaneswaran</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Project Roles</th>
+                    <td>Creating the catalogue</td>
+                </tr>
+                <tr>
+                    <td>Creating the website skeleton</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">Current course</th>
+                    <td>Bsc (Hons) Computer Science</td>
+                </tr>
+                <tr>
+                    <td>Sunway University</td>
+                </tr>
+                <tr>
+                    <td>Semester 3</td>
+                </tr>
+                <tr>
+                    <td>CGPA: 3.73</td>
+                </tr>
+                <tr>
+                    <th rowspan=6>Primary languages</th>
+                    <td>Python</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                </tr>
+                <tr>
+                    <td>SQL</td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                </tr>
+                <tr>
+                    <td>Javascript</td>
+                </tr>
+                <tr>
+                    <th rowspan="5">Academic Interests</th>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>Data Science & Analysis</td>
+                </tr>
+                <tr>
+                    <td>Literature & Fiction</td>
+                </tr>
+                <tr>
+                    <td>Bookkeeping</td>
+                </tr>
+                <tr>
+                    <td>Psychoanalysis & Sociology</td>
+                </tr>
+                <tr>
+                    <th rowspan="4">Hobbies</th>
+                    <td>Gaming</td>
+                </tr>
+                <tr>
+                    <td>Reading & Writing</td>
+                </tr>
+                <tr>
+                    <td>Drawing</td>
+                </tr>
+                <tr>
+                    <td>Walking</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Profiles</th>
+                    <td>Github</td>
+                </tr>
+                <tr>
+                    <td>Linkedin</td>
+                </tr>
+            </table>
+        </aside>
 
-        <!-- navigation links -->
-        <nav id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="catalogue.html">Catalogue</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="team.html">Team</a>
+        <section id="skills" class="full-width-section">
+            <h2>Technical Skills</h2>
+            <p>I am highly proficient in several languages.</p>
 
-            <!-- dark mode toggle and profile button -->
-            <div class="nav-actions">
-                <button id="toggle-theme-button" aria-label="toggle dark or light mode">MOON/SUN</button>
-                <a href="register.html" id="nav-login-button">LOGIN/REGISTER</a>
-                <!-- changes to profile button once logged in-->
+            <div class="skills-container">
+                <div class="skill-item">
+                    <span class="skill-name">Python 80%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill python"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">Java 75%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill java"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">HTML 90%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill html"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">CSS 60%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill css"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript 50%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill javascript"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">SQL 75%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill sql"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">Bash 60%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill bash"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">Markdown 95%</span>
+                    <div class="bar-bg">
+                        <div class="bar-fill markdown"></div>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
 
-    <!-- =================
-         MAIN CONTENT AREA
-         =================-->
-    <main id="main-content">
+            <p>I am also highly capable of using several key software in computer engineering</p>
+            <ul>
+                <li>Visual Studio Code</li>
+                <li>Microsoft Power BI</li>
+                <li>Draw.io</li>
+                <li>JetBrains IntelliJ IDEA</li>
+                <li>JetBrains Webstorm IDE</li>
+                <li>RenPy</li>
+                <li>Godot</li>
+                <li>Github</li>
+                <li>Cisco Packet Tracer</li>
+                <li>GNUSim8085</li>
+                <li>Oracle Virtual Box</li>
+                <li>Microsoft Excel</li>
+            </ul>
+        </section>
 
-        <!-- START HERE -->
-        <h1>Placeholder for Page Content</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sem sed sem sagittis facilisis.
-            Maecenas facilisis ipsum sed purus suscipit, eu lobortis diam interdum. Etiam at rhoncus risus. Aliquam
-            dapibus sem sed sapien maximus ultricies. Mauris ac justo sit amet leo malesuada placerat in et neque. Proin
-            metus urna, vehicula sed nisl vitae, pharetra fermentum tortor. Aliquam fringilla faucibus magna, et
-            elementum sapien fermentum nec. Praesent eu ultrices turpis. Integer eu sapien congue, sollicitudin felis a,
-            aliquet lacus. Etiam tempor, massa ac pulvinar viverra, massa magna consequat urna, non malesuada tortor
-            nibh egestas ex. Donec sem leo, aliquet ut. </p>
+        <section id="projects" class="full-width-section">
+            <h2>Featured Projects</h2>
+            <h3>Song catalogue project</h3>
+            <p>
+                This is a web based group assignment project that uses pure HTML, CSS, and JavaScript with no external frameworks or libraries used. This project demonstrates my ability to use native web languages to create a grid based song catalogue with dynamic updates and the ability to play songs as they pop out.
+            </p>
+            <h3>Java based blackjack program</h3>
+            <p>
+                This is a Java based group assignment that replicates the casino game Blackjack using object-oriented principles. This program demonstrates strong OOP aligned principles and card deck accuracy where each card is its own object in a deck, allowing for real world blackjack strategies such as card counting to be possible.
+            </p>
+        </section>
 
-    </main>
+        <section id="future" class="full-width-section">
+            <h2>Future Plans</h2>
+            <p>
+                I am currently planning on further expanding my skills that related to data science and machine learning.
+            </p>
+        </section>
 
-    <!-- ==========================
-         FOOTER SAME FOR EVERY PAGE
-         ========================== -->
-    <footer>
-        <p>&copy; 2026 music app. we own all rights.</p>
-    </footer>
+    </div>
 
-    <!-- ==================
-         JAVASCRIPT SCRIPTS
-         ===================-->
+</main>
 
-    <!-- EVERY PAGE NEEDS THEME SCRIPT -->
-    <script src="js/theme.js"></script>
+<!-- ==========================
+     FOOTER SAME FOR EVERY PAGE
+     ========================== -->
+<footer>
+    <p>&copy; 2026 music app. we own all rights.</p>
+</footer>
 
-    <!-- ADD PAGE-SPECIFIC JS BELOW HERE. DONT PUT THEM IN THE HEAD SECTION OR IT WONT WORK -->
+<!-- ==================
+     JAVASCRIPT SCRIPTS
+     ===================-->
+<script src="js/theme.js"></script>
 
 </body>
 </html>
