@@ -141,23 +141,22 @@
 
 #aside-name {
     text-align: center;
-    margin-top: 0;       /* Optional: aligns top spacing evenly */
-    margin-bottom: 12px;  /* Optional: adds breathing room above the photo */
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 .cv-download {
     display: block;
     width: 100%;
     padding: 10px;
-    margin-top: 12px;     /* Space below the image */
-    margin-bottom: 16px;  /* Space above the table */
+    margin-top: 12px;
+    margin-bottom: 16px;
     font-weight: bold;
     cursor: pointer;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     border-radius: 4px;
 
-    /* Smooth hover effect */
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -218,30 +217,26 @@
 @media (max-width: 768px) {
 
     .topmost-container {
-        grid-template-columns: 1fr; /* Stack into a single column */
+        grid-template-columns: 1fr;
     }
 
-    /* Force Aside Box to appear FIRST at the top on mobile */
     #aside-box {
         grid-column: 1;
         grid-row: 1;
     }
 
-    /* Move Intro/Bio content SECOND under the aside box */
     .top-left-content {
         grid-column: 1;
         grid-row: 2;
     }
 
-    /* Optional: Slightly smaller photo on mobile screens */
     #aside-box img {
         max-width: 150px;
     }
 }
 
-@media print {
+@media print { /*this was genuinely infuriating and horrible, i just cant*/
 
-    /* 1. Hide non-resume UI elements */
     header,
     footer,
     .nav-actions,
@@ -252,7 +247,6 @@
         display: none !important;
     }
 
-    /* 2. Force clean white paper background */
     body {
         background-color: white !important;
         color: black !important;
@@ -267,10 +261,6 @@
         padding: 0 !important;
     }
 
-    /*
-      3. Use Flexbox for print to force side-by-side layout on Page 1
-      (Fixes Firefox Grid page-break bug)
-    */
     .topmost-container {
         display: flex !important;
         flex-direction: row !important;
@@ -279,13 +269,11 @@
         gap: 16px !important;
     }
 
-    /* Left column takes remaining horizontal space */
     .top-left-content {
         flex: 1 1 0% !important;
         min-width: 0 !important;
     }
 
-    /* Right column stays fixed at 260px on Page 1 */
     #aside-box {
         width: 260px !important;
         flex-shrink: 0 !important;
@@ -293,15 +281,11 @@
         margin: 0 !important;
     }
 
-    /* Lower sections wrap underneath across 100% width */
     .full-width-section {
         width: 100% !important;
         flex: 1 0 100% !important;
     }
 
-    /*
-      4. Prevent text overlap & bad page breaks (Fixes Page 4 collision)
-    */
     section,
     article,
     table,
@@ -314,7 +298,6 @@
         page-break-inside: avoid !important;
     }
 
-    /* 5. Clean skill bars on paper */
     .bar-bg {
         border: 1px solid #000;
         background-color: #fff !important;
@@ -328,7 +311,6 @@
         transform: scaleX(1) !important;
     }
 
-    /* 1. Make the profile image smaller on paper */
     #aside-box img {
         max-width: 110px !important;
         margin: 0 auto 6px auto !important;
@@ -339,16 +321,15 @@
         margin-bottom: 4px !important;
     }
 
-    /* 2. Compact the sidebar table so it fits on Page 1 */
     #aside-box table {
-        font-size: 8pt !important;        /* Smaller print text */
+        font-size: 8pt !important;
         margin-top: 6px !important;
         border-collapse: collapse !important;
     }
 
     #aside-box th,
     #aside-box td {
-        padding: 3px 5px !important;      /* Reduced padding between rows */
+        padding: 3px 5px !important;
         line-height: 1.2 !important;
     }
 }
