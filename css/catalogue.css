@@ -14,12 +14,37 @@
     margin: 0 auto 10em auto;
 }
 
+#search-box:focus,
+#modifiers select:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#modifiers select {
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #0066cc;
+    background-color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+#search-box {
+    border-radius: 20px;
+    padding: 8px 10px;
+    border: 1px solid #0066cc;
+}
+
 .song-card {
     position: relative;
     background-color: white;
     border: 1px solid black;
+    border-radius: 10px;
     padding: 16px 16px 4px 16px;
     box-sizing: border-box;
+
+    transition: transform 0.25s ease, filter 0.25s ease;
 
 }
 
@@ -37,21 +62,49 @@
 
 .song-card:hover {
     z-index: 10;
+    transform: translateY(-6px) scale(1.02);
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+
+    border-bottom-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .play-button {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 10px;
+    right: 10px;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1db954;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
     display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 2px;
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .song-card:hover .play-button {
-    display: block;
+    display: flex;
+}
+
+
+.play-button:hover {
+    transform: scale(1.1);
+    background-color: #1ed760;
 }
 
 .album-art {
-    background-color: #e0e0e0; /* Temp image block */
+    background-color: #e0e0e0;
     aspect-ratio: 1 / 1;
     width: 100%;
     position: relative;
@@ -66,7 +119,8 @@
 
 .hidden-details {
     position: absolute;
-    top: 100%;
+    top: calc(100% - 2px);
+    width: calc(100% + 2px);
 
     left: -1px;
     right: -1px;
@@ -77,10 +131,19 @@
 
     padding: 2px 16px 16px 16px;
     display: none;
+    box-sizing: border-box;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .song-card:hover .hidden-details {
     display: block;
+}
+
+.song-card:hover {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 #bottom-player {
