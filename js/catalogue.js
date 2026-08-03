@@ -466,6 +466,17 @@ const songs = [
         language: "Korean",
         img: "images/kill-this-love.webp",
         audio: "audio/kill-this-love.opus"
+    },
+        {
+        id: 32,
+        title: "Gangnam Style",
+        artist: "PSY",
+        genre: "Electropop",
+        duration: "3:39",
+        year: 2012,
+        language: "Korean",
+        img: "images/gangnam-style.webp",
+        audio: "audio/gangnam-style.opus"
     }
 ];
 
