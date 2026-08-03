@@ -294,7 +294,7 @@ const songs = [
     {
         id: 16,
         title: "PUT YOUR HANDS UP",
-        artist: "RiRaN",
+        artist: "RiraN",
         genre: "Hardcore",
         duration: "2:19",
         year: 2018,
