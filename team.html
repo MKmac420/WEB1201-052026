@@ -7,74 +7,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CHANGE THIS TITLE FOR EACH PAGE-->
-    <title>insert title</title>
+    <title>Team</title>
 
     <link rel="stylesheet" href="css/global.css">
 
     <!-- ADD PAGE SPECIFIC CSS BELOW HERE -->
+    <link rel="stylesheet" href="css/team.css">
 </head>
 
 <body>
 
-    <!-- ==========================
-         GLOBAL HEADER & NAVIGATION 
-         ==========================-->
-    <header>
-        <div class="logo">
-            <a href="index.html">insert logo (click to go home)</a>
+<!-- ==========================
+     GLOBAL HEADER & NAVIGATION
+     ==========================-->
+<header>
+    <div class="logo">
+        <a href="index.html">insert logo (click to go home)</a>
+    </div>
+
+    <!-- hamburger button for mobile -->
+    <button id="mobile-menu-button" aria-label="opens nav menu">☰</button>
+
+    <!-- navigation links -->
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="team.html">Team</a>
+
+        <!-- dark mode toggle and profile button -->
+        <div class="nav-actions">
+            <button id="toggle-theme-button" aria-label="toggle dark or light mode">MOON/SUN</button>
+            <a href="register.html" id="nav-login-button">LOGIN/REGISTER</a>
+            <!-- changes to profile button once logged in-->
         </div>
+    </nav>
+</header>
 
-        <!-- hamburger button for mobile -->
-        <button id="mobile-menu-button" aria-label="opens nav menu">☰</button>
+<!-- =================
+     MAIN CONTENT AREA
+     =================-->
+<main id="main-content">
 
-        <!-- navigation links -->
-        <nav id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="catalogue.html">Catalogue</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="team.html">Team</a>
+    <h1 id="team-heading">Meet the team responsible</h1>
 
-            <!-- dark mode toggle and profile button -->
-            <div class="nav-actions">
-                <button id="toggle-theme-button" aria-label="toggle dark or light mode">MOON/SUN</button>
-                <a href="register.html" id="nav-login-button">LOGIN/REGISTER</a>
-                <!-- changes to profile button once logged in-->
+    <section class="team-container" aria-labelledby="team-heading">
+
+        <!-- Member 1 -->
+        <article class="team-member">
+            <div class="member-text">
+                <h2>Ding Tze Jian</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam condimentum finibus. Pellentesque congue lacinia erat, eu tristique justo mattis. </p>
+                <ul>
+                    <li>role 1</li>
+                    <li>role 2</li>
+                </ul>
+                <a href="#">portfolio link</a>
             </div>
-        </nav>
-    </header>
+            <figure class="member-photo">
+                <img src="images/shoujo-rei.webp" alt="Portrait of Member One">
+            </figure>
+        </article>
 
-    <!-- =================
-         MAIN CONTENT AREA
-         =================-->
-    <main id="main-content">
+        <!-- Member 2 -->
+        <article class="team-member">
+            <div class="member-text">
+                <h2>Vimesh A/L Puwaneswaran</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam condimentum finibus. Pellentesque congue lacinia erat, eu tristique justo mattis. </p>
+                <ul>
+                    <li>role 1</li>
+                    <li>role 2</li>
+                </ul>
+                <a href="#">portfolio link</a>
+            </div>
+            <figure class="member-photo">
+                <img src="images/shoujo-rei.webp" alt="Portrait of Member Two">
+            </figure>
+        </article>
 
-        <!-- START HERE -->
-        <h1>Placeholder for Page Content</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper sem sed sem sagittis facilisis.
-            Maecenas facilisis ipsum sed purus suscipit, eu lobortis diam interdum. Etiam at rhoncus risus. Aliquam
-            dapibus sem sed sapien maximus ultricies. Mauris ac justo sit amet leo malesuada placerat in et neque. Proin
-            metus urna, vehicula sed nisl vitae, pharetra fermentum tortor. Aliquam fringilla faucibus magna, et
-            elementum sapien fermentum nec. Praesent eu ultrices turpis. Integer eu sapien congue, sollicitudin felis a,
-            aliquet lacus. Etiam tempor, massa ac pulvinar viverra, massa magna consequat urna, non malesuada tortor
-            nibh egestas ex. Donec sem leo, aliquet ut. </p>
+        <!-- Member 3 -->
+        <article class="team-member">
+            <div class="member-text">
+                <h2>Yuto Tanaka</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam condimentum finibus. Pellentesque congue lacinia erat, eu tristique justo mattis. </p>
+                <ul>
+                    <li>role 1</li>
+                    <li>role 2</li>
+                </ul>
+                <a href="#">portfolio link</a>
+            </div>
+            <figure class="member-photo">
+                <img src="images/shoujo-rei.webp" alt="Portrait of Member Three">
+            </figure>
+        </article>
 
-    </main>
+    </section>
 
-    <!-- ==========================
-         FOOTER SAME FOR EVERY PAGE
-         ========================== -->
-    <footer>
-        <p>&copy; 2026 music app. we own all rights.</p>
-    </footer>
+</main>
 
-    <!-- ==================
-         JAVASCRIPT SCRIPTS
-         ===================-->
+<!-- ==========================
+     FOOTER SAME FOR EVERY PAGE
+     ========================== -->
+<footer>
+    <p>&copy; 2026 music app. we own all rights.</p>
+</footer>
 
-    <!-- EVERY PAGE NEEDS THEME SCRIPT -->
-    <script src="js/theme.js"></script>
+<!-- ==================
+     JAVASCRIPT SCRIPTS
+     ===================-->
 
-    <!-- ADD PAGE-SPECIFIC JS BELOW HERE. DONT PUT THEM IN THE HEAD SECTION OR IT WONT WORK -->
+<!-- EVERY PAGE NEEDS THEME SCRIPT -->
+<script src="js/theme.js"></script>
+
+<!-- ADD PAGE-SPECIFIC JS BELOW HERE. DONT PUT THEM IN THE HEAD SECTION OR IT WONT WORK -->
 
 </body>
 </html>
