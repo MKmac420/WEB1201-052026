@@ -1,8 +1,6 @@
 /*
 Author: Vimesh
-Desc: handles writing to the song grid in the catalogue html file
-    handles the search bar and sort by functions
-    handles the audio player
+Desc:
  */
 
 
@@ -56,9 +54,9 @@ function applyFiltersAndSort() {
         } // this is the same as the duration thing
 
 
-        //this code down here is literal magic
-        // it does title, artist, genre, and language all at once
-        // what it does is compare the alphabetical order of the selection in song
+        //this code down here does 4 things at once
+        // it sorts by title, artist, genre, and language all at once
+        // what it does is compare the alphabetical order of the selection in song title
         return a[selectedSortBy].localeCompare(b[selectedSortBy]);
     })
 
@@ -79,7 +77,7 @@ function renderCatalogue(songsToDisplay = songs) {
                     <div class="album-art">
                         <img src="${song.img}" alt="Album Art">
 
-                        <button class="play-button" onclick="playSong('${song.title}', '${song.artist}', '${song.audio}')">Play</button>
+                        <button class="play-button" onclick="playSong('${song.title}', '${song.artist}', '${song.audio}')">▶</button>
                     </div>
 
                     <h3> ${song.title} </h3>
@@ -118,7 +116,7 @@ closeButton.addEventListener('click', () => {
 
 
 // this smartly returns the timestamp in a song to raw seconds
-// this is equal to python's  `minutes, seconds = map(int, time_string.split(':'))`
+// this is equal to python's `minutes, seconds = map(int, time_string.split(':'))`
 function durationToSeconds(timestring) {
     const [min, sec] = timestring.split(':').map(Number);
     return (min * 60 + sec);
@@ -467,7 +465,7 @@ const songs = [
         img: "images/kill-this-love.webp",
         audio: "audio/kill-this-love.opus"
     },
-        {
+    {
         id: 32,
         title: "Gangnam Style",
         artist: "PSY",
