@@ -1,16 +1,13 @@
-/* Center and limit main content viewport to 1200px */
 #main-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Center main title */
 #main-content h1 {
     text-align: center;
 }
 
-/* Section wrapper for all team members */
 .team-container {
     display: flex;
     flex-direction: column;
@@ -18,21 +15,18 @@
     margin-top: 30px;
 }
 
-/* Article card for each individual member (CSS Grid) */
 .team-member {
     display: grid;
-    grid-template-columns: 1fr 150px; /* Text on left, figure/image on right */
+    grid-template-columns: 1fr 150px;
     gap: 20px;
     align-items: start;
-    height: auto; /* Expands with text content */
+    height: auto;
 }
 
-/* Figure resets */
 .member-photo {
     margin: 0;
 }
 
-/* Fixed size image placeholder */
 .member-photo img {
     width: 150px;
     height: 150px;
