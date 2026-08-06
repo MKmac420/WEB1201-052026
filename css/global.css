@@ -159,7 +159,7 @@ Desc: This handles the mobile hamburger menu layout
     }
 
     #nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
 
@@ -172,15 +172,19 @@ Desc: This handles the mobile hamburger menu layout
         gap: 4em;
         box-sizing: border-box;
 
-        transform: translateX(-20%);
         min-height: 100vh;
 
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        /*this was an inline code suggestion*/
+
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(-100%);
+
     }
 
     #nav-links.active {
-        display: flex;
+        transform: translateX(-20%);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /*this shadow was an inline code suggestion*/
+
     }
 
     #nav-links a {
@@ -190,7 +194,7 @@ Desc: This handles the mobile hamburger menu layout
 
     .nav-actions {
         display: flex;
-        flex-direction: column; /* stacks button & profile on top of each other */
+        flex-direction: column; /* stacks button and profile on top of each other */
         align-items: center;
         gap: 1.5em;
         width: 100%;
