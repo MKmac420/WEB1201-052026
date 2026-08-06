@@ -133,3 +133,67 @@ body.dark-mode .song-card .hidden-details {
     background-color: #1e1e1e;
     color: #cccccc;
 }
+
+
+/*
+Author: Vimesh
+Desc: This handles the mobile hamburger menu layout
+ */
+
+#mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+@media (max-width: 800px) {
+    #mobile-menu-button {
+        display: block;
+    }
+
+    header {
+        position: relative;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 2em 1.5em;
+        z-index: 1000;
+        gap: 4em;
+        box-sizing: border-box;
+
+        transform: translateX(-20%);
+        min-height: 100vh;
+
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /*this was an inline code suggestion*/
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    #nav-links a {
+        display: block;
+        font-weight: 600;
+    }
+
+    .nav-actions {
+        display: flex;
+        flex-direction: column; /* stacks button & profile on top of each other */
+        align-items: center;
+        gap: 1.5em;
+        width: 100%;
+        margin-top: 0.5em;
+    }
+}
