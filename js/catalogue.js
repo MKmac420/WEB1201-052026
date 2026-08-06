@@ -1,6 +1,10 @@
 /*
 Author: Vimesh
-Desc:
+Description: uses DOM manipulation to add 32 different unique song cards
+search bar to search for song titles or artists
+function to only show specific genres
+function to sort by various metrics
+a small helper function that parses a duration string into raw seconds
  */
 
 
@@ -75,9 +79,10 @@ function renderCatalogue(songsToDisplay = songs) {
                 <article class="song-card">
 
                     <div class="album-art">
-                        <img src="${song.img}" alt="Album Art">
+                        <img src="${song.img}" alt="${song.title} by ${song.artist} album cover">
 
-                        <button class="play-button" onclick="playSong('${song.title}', '${song.artist}', '${song.audio}')">▶</button>
+                        <button class="play-button" onclick="playSong('${song.title}', '${song.artist}', '${song.audio}')"
+                        aria-label="Play ${song.title} by ${song.artist}">▶</button>
                     </div>
 
                     <h3> ${song.title} </h3>
