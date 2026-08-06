@@ -52,20 +52,22 @@
 
     <!--
         Author: Vimesh
-        Description: music catalogue page displaying search filters
-         dynamic song cards grid
-          and a bottom audio player that plays music
+        Description: This page contains the catalogue with 32 different songs to choose from
+        The song grid is generated using JS DOM manipulation
+        The search and sorts are handled using JS
+        the bottom player logic
  -->
 
     <!-- START HERE -->
 
     <section id="modifiers">
         <label>
-            <input type="text" placeholder="Search..." id="search-box">
+            <label for="search-box" class="sr-only">Search songs or artists</label>
+            <input type="text" placeholder="Search..." id="search-box" aria-label="Search songs or artists">
         </label>
 
-        <label for="genre-select"></label>
-        <select name="genre" id="genre-select">
+        <label for="genre-select" class="sr-only">Filter by Genre</label>
+        <select name="genre" id="genre-select" aria-label="Filter by Genre">
             <option value="all">All Genres</option>
             <option value="Artcore">Artcore</option>
             <option value="EDM">EDM</option>
@@ -77,8 +79,8 @@
             <option value="Trance">Trance</option>
         </select>
 
-        <label for="sort-by">
-            <select name="sort-by" id="sort-by">
+        <label for="sort-by" class="sr-only">
+            <select name="sort-by" id="sort-by" aria-label="Sort Songs By">
                 <option value="title">Title (A-Z)</option>
                 <option value="artist">Artist (A-Z)</option>
                 <option value="genre">Genre (A-Z)</option>
