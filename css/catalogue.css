@@ -1,20 +1,22 @@
 /*
-Author: Vimesh
-Description: Stylesheet for
-catalogue controls,
- dynamic grid cards,
-  hover details pop-out effects,
-   and fixed audio player.
+    Author: Vimesh
+    Description: Stylesheet for catalogue.html
+                dynamic grid for song cards to be displayed, card hover and focus details,
+                card pop out animations and shadows, @media overrides for smaller displays,
+                accessibility option for tab users via using focus-within pseudoclasses
  */
 
 /* 1. modifiers and filters for the song catalogue */
 
+/* uses flex-direction column to lock the search, genre select, and sort-by functions,
+    in appropriate positions*/
 #modifiers {
     display: flex;
     justify-content: flex-start;
     gap: 1em;
     max-width: 1200px;
     margin: 0 auto 1em auto;
+    align-items: center;
 }
 
 #search-box {
@@ -41,6 +43,10 @@ catalogue controls,
 
 
 /* 2. the catalogue grid itself */
+
+/* uses responsive auto fill css grid with each card width being a minimum 180px
+    so the grid layout dynamically scales down from the maximum 6 rows down to
+    minimum 2 rows based on viewport size*/
 #song-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -65,7 +71,8 @@ catalogue controls,
 }
 
 /* this animation on hover */
-.song-card:hover {
+.song-card:hover,
+.song-card:focus-within {
     z-index: 20;
     transform: translateY(-6px);
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
@@ -115,7 +122,8 @@ catalogue controls,
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
-    display: none;
+    /*display: none;*/
+    opacity: 0;
     justify-content: center;
     align-items: center;
     padding: 0 0 0 2px;
@@ -123,19 +131,29 @@ catalogue controls,
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.song-card:hover .play-button {
+/* supports both tab select and mouse select*/
+.song-card:hover .play-button,
+.song-card:focus-within .play-button {
     display: flex;
+    opacity: 1;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .play-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
     background-color: #1ed760;
 }
 
-/* song card hidden details pop out */
+/* removes the outline when song list is selected via tab*/
+.play-button:focus {
+    outline: none;
+}
+
+/* song card hidden details pop out using a dynamic animation */
 
 .hidden-details {
-    display: none;
+    /*display: none;*/
+    opacity: 0;
     position: absolute;
     top: 100%;
     left: -1px;
@@ -150,10 +168,16 @@ catalogue controls,
     padding: 4px 16px 16px 16px;
     box-sizing: border-box;
     z-index: 20;
+
+    pointer-events: none;
 }
 
-.song-card:hover .hidden-details {
+.song-card:hover .hidden-details,
+.song-card:focus-within .hidden-details {
     display: block;
+    opacity: 1;
+
+    pointer-events: auto;
 }
 
 
@@ -167,23 +191,63 @@ catalogue controls,
     border-top: 2px solid black;
 
     display: none;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     gap: 1em;
     padding: 10px;
     z-index: 100;
+
 }
 
 #bottom-player.show-player {
     display: flex;
+    opacity: 1;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+
 }
 
 .song-detail h4 {
     display: inline-block;
 }
 
+/* 5. general */
 
-/* mobile compatability */
+#page-title {
+    max-width: 1200px;
+    margin: 0 auto 0.5em auto;
+    font-size: 2em;
+    text-shadow: pink 0 2px 0;
+}
+
+/*
+    Author: Ding Tze Jian
+    Description: moved from global.css. dark mode overrides for the song cards for better displayability
+*/
+
+/* Style the song card background and text in dark mode */
+body.dark-mode .song-card {
+    background-color: #242424; /* Darker card background */
+    color: #f5f5f5;
+    border: 1px solid #333;
+}
+
+/* Ensure all text inside the song card turns light */
+body.dark-mode .song-card h3,
+body.dark-mode .song-card p {
+    color: #f5f5f5;
+}
+
+/* Style the hidden details box inside the card */
+body.dark-mode .song-card .hidden-details {
+    background-color: #242424;
+    color: #cccccc;
+    border: 1px solid #333;
+}
+
+/* Author: Vimesh
+   Description: @media queries to support mobile layout */
+
 @media (max-width: 500px) {
 
     #song-list {
@@ -195,8 +259,13 @@ catalogue controls,
         flex-wrap: wrap;
     }
 
+    #modifiers > div:first-child {
+        width: 100%;
+    }
+
     #search-box {
         width: 100%;
+        margin-top: 8px;
     }
 
     #bottom-player {
