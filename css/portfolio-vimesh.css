@@ -1,16 +1,13 @@
-
 /*
 Author: Vimesh
-Description: personal portfolio with the following features
-            css variables for easy access
-            wikipedia/fandom style layout with a table of contents and aside box with key infomation
-            interactive animations
-            dynamic skillbar animations that look very cool
-            dark mode overrides
-
+Description: Stylesheets for portfolio-vimesh.html
+            Uses CSS Grid layout, Flexbox containers, custom CSS variables
+            dual-keyframe skill bar animations that are easily editable,
+            responsive media queries for mobile compatability, and
+            WCAG compliant @print stylesheets
  */
 
-/* css variables */
+/* css variables for some properties */
 :root {
     --bg-track: #e2e8f0;
     --bar-red: #ff5252;
@@ -23,7 +20,7 @@ Description: personal portfolio with the following features
 }
 
 
-/* -site layout and containers */
+/* site layout uses a 2 column grid layout to display the main content and the aside box to a set size*/
 .topmost-container {
     display: grid;
     grid-template-columns: 1fr 320px;
@@ -232,21 +229,87 @@ li {
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
+/* https://www.w3schools.com/css/css3_animations.asp */
 .bar-fill {
     height: 100%;
     border-radius: 6px;
 
     /*
-       animation chain
-       1. growBar: Animates width from 0% on page load (1.5s)
-       2. rgbCycle: Continuously loops RGB colors infinitely (6s)
-    */
-    animation:
-            growBar 5s infinite ease-in-out,
-            rgbCycle 7s infinite ease-in-out;
+    skill bar animation chain
+    1. growbar loops for 5 seconds from 0% to n%
+        0% to 60% takes 3 seconds
+        60% to 90% takes 1.5 seconds
+        90% to 100% takes 0.5 seconds
+        the animation then loops back infinitely.
+        n% is defined by the specific skill, and no skill that i posses is at 100%
+     2. rgbcycle loops from red green and blue for 7 seconds
+*/
+
+    animation: growBar 5s infinite ease-in-out,
+    rgbCycle 7s infinite ease-in-out;
 }
 
-/* Dark mode overrides */
+/* grows forever */
+@keyframes growBar {
+    0% {
+        max-width: 0;
+    }
+    60%, 90% {
+        max-width: 100%;
+    }
+    100% {
+        max-width: 0;
+    }
+}
+
+/* the bar color cycles */
+@keyframes rgbCycle {
+    0%, 100% {
+        background-color: var(--bar-red);
+    }
+    33% {
+        background-color: var(--bar-green);
+    }
+    66% {
+        background-color: var(--bar-blue);
+    }
+}
+
+/* skill bar widths */
+.python {
+    width: 80%;
+}
+
+.java {
+    width: 75%;
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 60%;
+}
+
+.javascript {
+    width: 50%;
+}
+
+.sql {
+    width: 75%;
+}
+
+.bash {
+    width: 60%;
+}
+
+.markdown {
+    width: 95%;
+}
+
+
+/* dark mode overrides */
 body.dark-mode {
     --text-dark: white;
     --border-color: #334155;
@@ -292,40 +355,8 @@ body.dark-mode .cv-download:hover {
     color: #ffffff;
 }
 
-/* grows on page load */
-@keyframes growBar {
-    from {
-        width: 0;
-    }
-}
 
-/* the bar color cycles */
-@keyframes rgbCycle {
-    0%, 100% {
-        background-color: var(--bar-red);
-    }
-    33% {
-        background-color: var(--bar-green);
-    }
-    66% {
-        background-color: var(--bar-blue);
-    }
-}
-
-/* skill bar widths */
-.python     { width: 80%; }
-.java       { width: 75%; }
-.html       { width: 90%; }
-.css        { width: 60%; }
-.javascript { width: 50%; }
-.sql        { width: 75%; }
-.bash       { width: 60%; }
-.markdown   { width: 95%; }
-
-
-
-
-
+/* media query to collapse the 2 column grid into just 1 column*/
 @media (max-width: 768px) {
     .topmost-container {
         grid-template-columns: 1fr;
@@ -347,9 +378,17 @@ body.dark-mode .cv-download:hover {
 }
 
 
+/*a very complex print stylesheet that removes native browser ui elements
+    website specific navigation elements, optimizing the layout for pdf or printing by
+    changing all colors to black and white, removing animations, and ensuring
+    all the layout explicitly works on both chrome and firefox with 0 bugs*/
 
-
+/* https://www.w3schools.com/cssref/css3_pr_mediaquery.php*/
 @media print {
+
+    @page {
+        margin: 0; /* needed to remove the browser native infomation */
+    }
 
     header,
     footer,
@@ -364,6 +403,9 @@ body.dark-mode .cv-download:hover {
         color: #000000 !important;
         font-size: 10pt !important;
         line-height: 1.35 !important;
+
+        padding: 2cm !important;
+        margin-bottom: 5cm !important;
     }
 
     main, .topmost-container {
@@ -410,6 +452,7 @@ body.dark-mode .cv-download:hover {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
         animation: none !important;
+        max-width: 100% !important;
         display: block !important;
     }
 
