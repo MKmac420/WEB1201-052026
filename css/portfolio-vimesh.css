@@ -6,6 +6,7 @@ Description: personal portfolio with the following features
             wikipedia/fandom style layout with a table of contents and aside box with key infomation
             interactive animations
             dynamic skillbar animations that look very cool
+            dark mode overrides
 
  */
 
@@ -243,6 +244,52 @@ li {
     animation:
             growBar 5s infinite ease-in-out,
             rgbCycle 7s infinite ease-in-out;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    --text-dark: white;
+    --border-color: #334155;
+    --bg-track: #334155;
+}
+
+/* TOC box */
+body.dark-mode .toc-box {
+    background-color: #242424;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .toc-box a {
+    color: #38bdf8;
+}
+
+body.dark-mode .toc-box a:hover {
+    color: #7dd3fc;
+}
+
+/* aside box */
+body.dark-mode #aside-box th {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode #aside-box td {
+    color: ghostwhite;
+}
+
+body.dark-mode #aside-box tr:hover {
+    background-color: #333333;
+}
+
+/* cv button */
+body.dark-mode .cv-download {
+    background-color: #242424;
+    color: #f8fafc;
+    border-color: #38bdf8;
+}
+
+body.dark-mode .cv-download:hover {
+    background-color: #0284c7;
+    color: #ffffff;
 }
 
 /* grows on page load */
