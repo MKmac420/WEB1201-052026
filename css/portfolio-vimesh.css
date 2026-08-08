@@ -1,3 +1,14 @@
+
+/*
+Author: Vimesh
+Description: personal portfolio with the following features
+            css variables for easy access
+            wikipedia/fandom style layout with a table of contents and aside box with key infomation
+            interactive animations
+            dynamic skillbar animations that look very cool
+
+ */
+
 /* css variables */
 :root {
     --bg-track: #e2e8f0;
@@ -166,6 +177,28 @@
     border-bottom: none;
 }
 
+.list-subtext {
+    display: block;
+    margin-left: 1em;
+    font-style: italic;
+    font-size: 90%;
+}
+
+p {
+    /*margin: 5px 0 5px 0;*/
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+}
+
+li {
+    line-height: 1.6;
+}
+
+#name-title {
+    font-family: "Lucida Handwriting", "Lucida Sans Unicode", "Lucida Sans", Arial, sans-serif;
+
+}
+
 
 /* the progress bar skill bar thing */
 .skills-container {
@@ -208,8 +241,8 @@
        2. rgbCycle: Continuously loops RGB colors infinitely (6s)
     */
     animation:
-            growBar 1.5s ease-out forwards,
-            rgbCycle 6s infinite ease-in-out;
+            growBar 5s infinite ease-in-out,
+            rgbCycle 7s infinite ease-in-out;
 }
 
 /* grows on page load */
